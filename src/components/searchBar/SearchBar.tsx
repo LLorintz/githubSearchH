@@ -16,6 +16,7 @@ const SearchBar = ({saveUserData}:searchbarprops) => {
 
   const fetchuser = async(user:string)=>{
     try {
+      //const response = await fetch(`/users.json`)
       const response = await fetch(`https://api.github.com/users/${user}`)
       if (!response.ok) {
         throw new Error;
